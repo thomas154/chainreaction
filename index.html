@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang= "en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no" >
+	<title>CHAIN REACTION</title>
+	<link rel='stylesheet' media='screen and (min-width: 450px) and (max-width: 1920px)' href='/css/maindesk.css' />
+	<link rel='stylesheet' media='screen and (min-width: 450px) and (max-width: 1920px)' href='/css/chatdesk.css' />
+	<link rel='stylesheet' media='screen and (min-width: 0px) and (max-width: 450px)'href='/css/main.css' />
+	<link rel='stylesheet' media='screen and (min-width: 0px) and (max-width: 450px)'href='/css/chat.css' />
+	<script src="/javascript/chclient.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<meta name="google-signin-client_id" content="1092317785933-795ctdb99pi1bcuu2124h69enb0umn0d.apps.googleusercontent.com">
+</head>
+<body>
+	<div id="gsignin" class="gsignin">
+	<div class="heading">Chain Reaction</div>
+	<div><input type="button" value="Play" onclick="play();" class="buttonp"></div>
+	<div class="g-signin2" data-onsuccess="onSignIn" id="gbutton"></div>
+	</div>
+
+	<ul>
+	  <li><a onclick="displayLogs();">Chain Reaction</a></li>
+		<li style="float:right;font-size:15px;" id="dispname">waiting for others...</li>
+	</ul>
+
+	<div class="stoppedtyping" id="typing">typing...</div>
+
+	<div id="chcol" class="chcol"></div>
+	<div class="logs" id="logs">
+		<div class="logsHeader"><center>Logs</center>
+			<div id="close" class="close" onclick="closeLogs();">x</div>
+		</div>
+		<div class="logsbody" id="logsbody">
+
+		</div>
+	</div>
+	<div class="chat-footer">
+	<input type="text" id="global_input" class="textbox" placeholder="Type a message" onclick="open_box();"></input>
+	<div class="slideopen" id="slideopen">
+		<img src="/images/mail.png" width="45px" height="45px" onclick="open_box();" id="malert">
+	</div>
+	</div>
+
+	<div class="logs" id="chat">
+		<div class="logsHeader">
+			<div id="ownimage" style="float:right;position:relative;top:-8px;"></div>
+			<center>Messenger</center>
+			<div id="close" class="close" onclick="chatclose();">x</div>
+		</div>
+		<div class="chat-body" id="chatBody">
+		</div>
+	</div>
+
+	<div class="backcover" id="backcover">
+	<div id="declareresult" class="declareresult">
+		<H1 class="wonname" id='wonname'></H1>
+		<input type="button" onclick="reloadpage();" class="button" value="Ok">
+	</div>
+	</div>
+	<div id="popup" class="popup"></div>
+		<div class="main-menu"></div>
+			<table class='arena' id="grid" border="5" cellspacing="0" style="border-color:rgba(50,57,149,.7)">
+				<tr style="pointer-events: none">
+					<td onclick="checkgame(0,0)" id="00"></td>
+					<td onclick="checkgame(0,1)" id="01"></td>
+					<td onclick="checkgame(0,2)" id="02"></td>
+					<td onclick="checkgame(0,3)" id="03"></td>
+					<td onclick="checkgame(0,4)" id="04"></td>
+					<td onclick="checkgame(0,5)" id="05"></td>
+				<tr>
+				<tr style="pointer-events: none">
+					<td onclick="checkgame(1,0)" id="10"></td>
+					<td onclick="checkgame(1,1)" id="11"></td>
+					<td onclick="checkgame(1,2)" id="12"></td>
+					<td onclick="checkgame(1,3)" id="13"></td>
+					<td onclick="checkgame(1,4)" id="14"></td>
+					<td onclick="checkgame(1,5)" id="15"></td>
+				<tr>
+				<tr style="pointer-events: none">
+					<td onclick="checkgame(2,0)" id="20"></td>
+					<td onclick="checkgame(2,1)" id="21"></td>
+					<td onclick="checkgame(2,2)" id="22"></td>
+					<td onclick="checkgame(2,3)" id="23"></td>
+					<td onclick="checkgame(2,4)" id="24"></td>
+					<td onclick="checkgame(2,5)" id="25"></td>
+				<tr style="pointer-events: none">
+					<td onclick="checkgame(3,0)" id="30"></td>
+					<td onclick="checkgame(3,1)" id="31"></td>
+					<td onclick="checkgame(3,2)" id="32"></td>
+					<td onclick="checkgame(3,3)" id="33"></td>
+					<td onclick="checkgame(3,4)" id="34"></td>
+					<td onclick="checkgame(3,5)" id="35"></td>
+				<tr style="pointer-events: none">
+					<td onclick="checkgame(4,0)" id="40"></td>
+					<td onclick="checkgame(4,1)" id="41"></td>
+					<td onclick="checkgame(4,2)" id="42"></td>
+					<td onclick="checkgame(4,3)" id="43"></td>
+					<td onclick="checkgame(4,4)" id="44"></td>
+					<td onclick="checkgame(4,5)" id="45"></td>
+				<tr>
+				<tr style="pointer-events: none">
+					<td onclick="checkgame(5,0)" id="50"></td>
+					<td onclick="checkgame(5,1)" id="51"></td>
+					<td onclick="checkgame(5,2)" id="52"></td>
+					<td onclick="checkgame(5,3)" id="53"></td>
+					<td onclick="checkgame(5,4)" id="54"></td>
+					<td onclick="checkgame(5,5)" id="55"></td>
+				<tr>
+				<tr style="pointer-events: none">
+					<td onclick="checkgame(6,0)" id="60"></td>
+					<td onclick="checkgame(6,1)" id="61"></td>
+					<td onclick="checkgame(6,2)" id="62"></td>
+					<td onclick="checkgame(6,3)" id="63"></td>
+					<td onclick="checkgame(6,4)" id="64"></td>
+					<td onclick="checkgame(6,5)" id="65"></td>
+				<tr>
+				<tr style="pointer-events: none">
+					<td onclick="checkgame(7,0)" id="70"></td>
+					<td onclick="checkgame(7,1)" id="71"></td>
+					<td onclick="checkgame(7,2)" id="72"></td>
+					<td onclick="checkgame(7,3)" id="73"></td>
+					<td onclick="checkgame(7,4)" id="74"></td>
+					<td onclick="checkgame(7,5)" id="75"></td>
+				<tr>
+				<tr style="pointer-events: none">
+					<td onclick="checkgame(8,0)" id="80"></td>
+					<td onclick="checkgame(8,1)" id="81"></td>
+					<td onclick="checkgame(8,2)" id="82"></td>
+					<td onclick="checkgame(8,3)" id="83"></td>
+					<td onclick="checkgame(8,4)" id="84"></td>
+					<td onclick="checkgame(8,5)" id="85"></td>
+				<tr>
+			</table>
+		</div>
+</body>
+</html>

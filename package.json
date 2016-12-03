@@ -1,0 +1,14 @@
+{
+  "name": "chainreaction",
+  "version": "1.0.0",
+  "description": "chainreaction game",
+  "dependencies": {
+    "websocket": "^1.0.23",
+	"express":"4.13.3"
+  },
+  "scripts": {
+    "start": "node chserver.js"
+  },
+  "author": "blesson thomas",
+  "license": "ISC"
+}
