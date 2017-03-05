@@ -31,7 +31,9 @@ var id='',name='',img='',email='';
 			}
 			//var name=prompt("enter your name");
 			function checkgame(x,y)
-			{
+			{	var inputs=document.getElementsByTagName('tr');
+				for(var i=0; i<inputs.length; ++i)
+					inputs[i].style.pointerEvents ='none';
 				var arr=['onclicked',x,y,name];
 				jarr=JSON.stringify(arr);
 				if(colorarray[x][y]=='' || colorarray[x][y]==color)
