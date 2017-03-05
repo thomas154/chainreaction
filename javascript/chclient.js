@@ -32,12 +32,16 @@ var id='',name='',img='',email='';
 			//var name=prompt("enter your name");
 			function checkgame(x,y)
 			{	var inputs=document.getElementsByTagName('tr');
-				for(var i=0; i<inputs.length; ++i)
-					inputs[i].style.pointerEvents ='none';
+
 				var arr=['onclicked',x,y,name];
 				jarr=JSON.stringify(arr);
-				if(colorarray[x][y]=='' || colorarray[x][y]==color)
+
+				//block multiple moves and send data to server.
+				if(colorarray[x][y]=='' || colorarray[x][y]==color){
+					for(var i=0; i<inputs.length; ++i)
+						inputs[i].style.pointerEvents ='none';
 					ws.send(jarr);
+				}
 				else {
 					console.log('cant click here');
 					popups(['pop','cant click here']);
