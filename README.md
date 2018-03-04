@@ -16,18 +16,18 @@ link:-<a href="https://onlinechainreaction.herokuapp.com" target="_Blank">here</
 # Screenshots
 
 ###Login page
-<center><img src="scrot/home.png" width="640"/></center>
+<center><img src="https://raw.githubusercontent.com/thomas154/chainreaction/master/scrot/home.png" width="640"/></center>
 
 ###Popup (toast message)
-<center><img src="scrot/initial.png" width="640"/></center>
+<center><img src="https://raw.githubusercontent.com/thomas154/chainreaction/master/scrot/initial.png" width="640"/></center>
 
 ###Inbuild chat system.
-<center><img src="scrot/messenger.png" width="640"/></center>
+<center><img src="https://raw.githubusercontent.com/thomas154/chainreaction/master/scrot/messenger.png" width="640"/></center>
 
 ###Game view
-<center><img src="scrot/game.png" width="640"/></center>
+<center><img src="https://raw.githubusercontent.com/thomas154/chainreaction/master/scrot/game.png" width="640"/></center>
 
 ###Its Responsive too!!!!
-<center><img src="scrot/mobgame.png" width="640"/></center>
+<center><img src="https://raw.githubusercontent.com/thomas154/chainreaction/master/scrot/mobgame.png" width="640"/></center>
 
 
