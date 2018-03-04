@@ -29,5 +29,10 @@ link:-<a href="https://onlinechainreaction.herokuapp.com" target="_Blank">here</
 <img src="https://github.com/thomas154/chainreaction/blob/master/scrots/game.png" width="640">
 
 ### Its Responsive too!!!!
-<img src="https://github.com/thomas154/chainreaction/blob/master/scrots/mobgame.png" width="640">
+<img src="https://github.com/thomas154/chainreaction/blob/master/scrots/mobgame.png" width="340">
 
+<img src="https://github.com/thomas154/chainreaction/blob/master/scrots/mobmessenger.png" width="340">
+
+<img src="https://github.com/thomas154/chainreaction/blob/master/scrots/mobtyp.png" width="340">
+
+<img src="https://github.com/thomas154/chainreaction/blob/master/scrots/mobunread.png" width="340">
